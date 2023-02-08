@@ -5,6 +5,7 @@
   "license": "MIT",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
+  "style": "dist/_index.scss",
   "repository": {
     "url": "https://github.com/diegoanazco79/vozy-sb-components",
     "type": "git"
@@ -33,6 +34,7 @@
     "@types/react-dom": "18.0.10",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sass": "^1.58.0",
     "storybook-dark-mode": "2.0.5",
     "typescript": "4.9.5"
   },
@@ -73,7 +75,6 @@
     "babel-loader": "8.3.0",
     "copyfiles": "^2.4.1",
     "css-loader": "5.2.6",
-    "node-sass": "^8.0.0",
     "rimraf": "^4.1.2",
     "sass-loader": "10.1.1",
     "semantic-release": "^20.1.0",
