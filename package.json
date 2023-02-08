@@ -10,7 +10,7 @@
     "type": "git"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=14"
   },
   "release": {
     "branches": [
