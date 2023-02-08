@@ -1,7 +1,26 @@
 {
-  "name": "vozy-storybook",
+  "name": "vozy-components-test",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "license": "MIT",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
+  "repository": {
+    "url": "https://github.com/diegoanazco79/vozy-sb-components",
+    "type": "git"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@coreui/coreui": "4.2.6",
     "@coreui/react": "4.5.2",
@@ -19,7 +38,9 @@
   },
   "scripts": {
     "start": "start-storybook -p 6006",
-    "build": "build-storybook"
+    "build": "npm run clean && tsc && npm run copy-files",
+    "clean": "rimraf dist/",
+    "copy-files": "copyfiles -u 1 src/**/*.scss dist/"
   },
   "eslintConfig": {
     "extends": [
@@ -50,9 +71,20 @@
     "@storybook/react": "6.5.16",
     "@storybook/testing-library": "0.0.13",
     "babel-loader": "8.3.0",
+    "copyfiles": "^2.4.1",
     "css-loader": "5.2.6",
+    "rimraf": "^4.1.2",
     "sass": "1.58.0",
     "sass-loader": "10.1.1",
+    "semantic-release": "^20.1.0",
     "style-loader": "2.0.0"
-  }
+  },
+  "plugins": [
+    "@semantic-release/commit-analyzer",
+    "@semantic-release/release-notes-generator",
+    "@semantic-release/changelog",
+    "@semantic-release/github",
+    "@semantic-release/npm",
+    "@semantic-release/git"
+  ]
 }

@@ -2,7 +2,7 @@ import { CSpinner } from '@coreui/react';
 
 import './styles.scss';
 
-interface LoadingDataProps {
+export interface LoadingDataProps {
   /**
    * ID of the component
    */

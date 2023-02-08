@@ -4,7 +4,7 @@ import { VzLabel } from '../Label';
 
 import './styles.scss';
 
-interface BadgeProps {
+export interface BadgeProps {
   /**
    * ID of the component
    */

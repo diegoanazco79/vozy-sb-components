@@ -4,7 +4,7 @@ import ArrowIcon from '../../assets/icons/ArrowIcon';
 
 import './styles.scss';
 
-interface StepsProps {
+export interface StepsProps {
   /**
    * ID of the component
    */

@@ -4,7 +4,7 @@ import ArrowIcon from '../../assets/icons/ArrowIcon';
 
 import './styles.scss';
 
-interface PaginationProps {
+export interface PaginationProps {
   /**
    * ID of the component
    */

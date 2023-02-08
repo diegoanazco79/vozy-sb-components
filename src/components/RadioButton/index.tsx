@@ -4,7 +4,7 @@ import { VzLabel } from "../Label"
 
 import './styles.scss'
 
-interface RadioButtonProps {
+export interface RadioButtonProps {
   /**
    * ID of the component
    */

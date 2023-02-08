@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.vz-badge {
+  .vz-label {
+    color: $dark-color !important;
+  }
+
+  &-neutral {
+    background-color: $border-gray !important;
+  }
+
+  &-failed {
+    background-color: $light-warning-color !important;
+  }
+
+  &-success {
+    background-color: $main-green !important;
+  }
+}

@@ -4,7 +4,7 @@ import { VzLabel } from "../Label"
 
 import './styles.scss'
 
-interface SwitchProps {
+export interface SwitchProps {
   /**
    * ID of the component
    */

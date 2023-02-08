@@ -2,7 +2,7 @@ import { CFormLabel } from '@coreui/react'
 
 import './styles.scss'
 
-interface LabelProps {
+export interface LabelProps {
   /**
    * ID of the component
    */

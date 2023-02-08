@@ -1,0 +1,42 @@
+@import '../../styles/variables.scss';
+
+.vz-switch-wrapper {
+  display: flex;
+  align-items: center;
+  height: 100%;
+
+  .vz-toggle-switch {
+    .form-check-input {
+      background-color: $border-gray;
+      border: none !important;
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3' fill='white'/%3e%3c/svg%3e") !important;
+      cursor: pointer !important;
+
+      &:checked {
+        background-color: $main-purple;
+        outline: none !important;
+      }
+
+      &:focus {
+        box-shadow: none !important;
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-switch-wrapper {
+    .vz-toggle-switch {
+      .form-check-input {
+        background-color: $border-gray;
+        background-color: $dark-gray;
+
+        &:checked {
+          background-color: $main-green;
+          outline: none !important;
+        }
+      }
+    }
+  }
+}

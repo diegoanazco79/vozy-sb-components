@@ -5,7 +5,7 @@ import { truncateText } from '../../utils/functions'
 
 import './styles.scss'
 
-interface CheckboxProps {
+export interface CheckboxProps {
   /**
    * ID of the component
    */
