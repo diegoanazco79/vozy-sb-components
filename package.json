@@ -5,7 +5,6 @@
   "license": "MIT",
   "typings": "dist/index.d.ts",
   "main": "dist/index.js",
-  "style": "dist/_index.scss",
   "repository": {
     "url": "https://github.com/diegoanazco79/vozy-sb-components",
     "type": "git"
