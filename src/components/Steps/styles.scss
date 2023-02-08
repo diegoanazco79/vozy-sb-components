@@ -1,0 +1,32 @@
+@import '../../styles/variables.scss';
+@import '../../styles/utils.scss';
+
+.vz-steps-wrapper {
+  display: flex;
+
+  .step-text {
+    color: $gray-color;
+    cursor: pointer !important;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.0625rem;
+    letter-spacing: 0em;
+
+    &__selected { color: $dark-purple; }
+  }
+
+  .step-arrow-icon {
+    @extend .vz-rotate-right;
+    path { stroke: $gray-color !important; }
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-steps-wrapper {
+    .step-text {
+      &__selected { color: $light-green; }
+    }
+  }
+}

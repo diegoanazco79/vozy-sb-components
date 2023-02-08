@@ -1,0 +1,24 @@
+@import '../../styles/variables.scss';
+@import '../../styles/fonts.scss';
+
+.vz-label {
+  &-header {
+    @extend .vz-header;
+  }
+
+  &-header-small {
+    @extend .vz-header-small;
+  }
+
+  &-title {
+    @extend .vz-title;
+  }
+
+  &-default {
+    @extend .vz-default;
+  }
+
+  &-caption {
+    @extend .vz-caption;
+  }
+}

@@ -1,0 +1,77 @@
+@import '../../styles/variables.scss';
+@import '../../styles/utils.scss';
+
+.pagination-nav {
+  &-end {
+    align-items: center;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 0.9375rem;
+  }
+
+  &-left-arrow, &-right-arrow {
+    align-items: center;
+    background-color: $pure-white;
+    border-radius: 0.3125rem;
+    border: 0.0625rem solid $border-gray;
+    box-sizing: border-box;
+    display: inline-flex;
+    height: 2.491875rem;
+    justify-content: center;
+    width: 2.491875rem;
+
+    svg > path { stroke: $light-gray-color; }
+
+    &-active {
+      &:hover {
+        border-color: $main-purple;
+        transition: 0.33ms;
+        svg > path { stroke: $main-purple; }
+      }
+
+      &:focus { outline: none; }
+    }
+
+    &-disabled { opacity: 0.5; }
+  }
+
+  &-text {
+    color: $dark-purple;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.1875rem;
+  }
+
+  &-left-arrow {
+    margin-right: 0.7106rem;
+    @extend .vz-rotate-left;
+  }
+
+  &-right-arrow {
+    margin-left: 0.7106rem;
+    @extend .vz-rotate-right;
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .pagination-nav {
+    &-left-arrow, &-right-arrow {
+      background-color: $pure-black;
+      border-color: $dark-gray;
+
+      svg > path { stroke: $gray-color; }
+      
+      &-active {
+        &:hover {
+          border-color: $main-green;
+          svg > path { stroke: $main-green; }
+        }
+      }
+    }
+
+    &-text { color: $light-green; }
+  }
+}

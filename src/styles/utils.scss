@@ -1,0 +1,15 @@
+.vz-rotate {
+  transform: rotateZ(180deg);
+}
+
+.vz-rotate-left {
+  transform: rotateZ(90deg);
+}
+
+.vz-rotate-right {
+  transform: rotateZ(-90deg);
+}
+
+.vz-rotate-45 {
+  transform: rotateZ(45deg);
+}

@@ -1,0 +1,20 @@
+@import '../../styles/variables.scss';
+
+.vz-loading-data {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  .vz-default-spinner {
+    color: $main-purple;
+  }
+}
+
+/* Dark theme */
+.c-dark-theme {
+  .vz-loading-data {
+    .vz-default-spinner {
+      color: $main-green;
+    }
+  }
+}
