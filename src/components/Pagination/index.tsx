@@ -1,3 +1,5 @@
+import { useMemo } from 'react';
+
 import ArrowIcon from '../../assets/icons/ArrowIcon';
 
 import '../../styles/pagination.scss';
@@ -37,8 +39,13 @@ export const VzPagination = ({
   id, classNames, currentPage, totalPages, loadingData, connectorText,
   onPageChange
 }: PaginationProps) => {
-  const leftButtonValidation = currentPage === 1 || loadingData || totalPages === 0
-  const rightButtonValidation = currentPage === totalPages || loadingData || totalPages === 0
+  const leftButtonValidation = useMemo(() => (
+    currentPage === 1 || loadingData || totalPages === 0
+  ), [currentPage, totalPages, loadingData]);
+
+  const rightButtonValidation = useMemo(() => (
+    currentPage === totalPages || loadingData || totalPages === 0
+  ), [currentPage, totalPages, loadingData]);
 
   return (
     <div className={classNames || ''}>
@@ -52,9 +59,9 @@ export const VzPagination = ({
       </button>
 
       <span className='pagination-nav-text'>
-        {currentPage} {' '}
-        {connectorText} {' '}
-        {totalPages}
+        { currentPage } {' '}
+        { connectorText } {' '}
+        { totalPages }
       </span>
 
       <button
