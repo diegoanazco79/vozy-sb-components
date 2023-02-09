@@ -3,7 +3,7 @@ import { VzLabel } from '../Label'
 
 import { truncateText } from '../../utils/functions'
 
-import '../../styles/components/checkbox.scss';
+import '../../styles/checkbox.scss';
 
 export interface CheckboxProps {
   /**

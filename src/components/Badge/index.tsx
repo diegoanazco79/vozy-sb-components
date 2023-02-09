@@ -2,7 +2,7 @@ import { CBadge } from '@coreui/react';
 
 import { VzLabel } from '../Label';
 
-import '../../styles/components/badge.scss';
+import '../../styles/badge.scss';
 
 export interface BadgeProps {
   /**

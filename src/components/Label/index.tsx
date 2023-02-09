@@ -1,6 +1,6 @@
 import { CFormLabel } from '@coreui/react'
 
-import '../../styles/components/label.scss';
+import '../../styles/label.scss';
 
 export interface LabelProps {
   /**

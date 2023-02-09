@@ -1,6 +1,6 @@
 import { CSpinner } from '@coreui/react';
 
-import '../../styles/components/loadingData.scss';
+import '../../styles/loadingData.scss';
 
 export interface LoadingDataProps {
   /**

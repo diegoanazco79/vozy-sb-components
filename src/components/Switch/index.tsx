@@ -2,7 +2,7 @@ import { CFormSwitch } from "@coreui/react"
 
 import { VzLabel } from "../Label"
 
-import '../../styles/components/switch.scss';
+import '../../styles/switch.scss';
 
 export interface SwitchProps {
   /**

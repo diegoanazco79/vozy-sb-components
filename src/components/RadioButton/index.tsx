@@ -2,7 +2,7 @@ import { CFormCheck } from "@coreui/react"
 
 import { VzLabel } from "../Label"
 
-import '../../styles/components/radioButton.scss';
+import '../../styles/radioButton.scss';
 
 export interface RadioButtonProps {
   /**
