@@ -39,6 +39,7 @@ export const VzLoadingData = ({ id, classNames, size, style, wrapperClassNames, 
       className={`vz-default-spinner ${classNames}`}
       style={style}
       size={size}
+      visuallyHiddenLabel=''
     />
   </div>
 );

@@ -46,6 +46,7 @@ export const VzCheckbox = ({
 }: CheckboxProps) => (
   <CFormCheck
     id={id}
+    name={id}
     className={`vz-checkbox ${className}`}
     label={<VzLabel type='default' label={ allowTruncate ? truncateText(label, truncateLength) : label } />}
     disabled={disabled}
