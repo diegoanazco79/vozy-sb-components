@@ -1,5 +1,3 @@
-import '@coreui/coreui/dist/css/coreui.min.css';
-
 export { VzBadge } from './components/Badge'
 export { VzCheckbox } from './components/Checkbox'
 export { VzLabel } from './components/Label'
