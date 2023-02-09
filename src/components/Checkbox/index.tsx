@@ -1,5 +1,4 @@
 import { CFormCheck } from '@coreui/react'
-import '@coreui/coreui/dist/css/coreui.min.css';
 import { VzLabel } from '../Label'
 
 import { truncateText } from '../../utils/functions'
