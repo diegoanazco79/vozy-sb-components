@@ -1,5 +1,3 @@
-import { useMemo } from 'react';
-
 import ArrowIcon from '../../assets/icons/ArrowIcon';
 
 import '../../styles/steps.scss';
@@ -32,11 +30,9 @@ export interface StepsProps {
 };
 
 export const VzSteps = ({ id, steps, separatorCharacter, className, selectedStep, onClickStep }: StepsProps) => {
-  const Separator = useMemo(() => (
-    separatorCharacter
-      ? <span className='step-text mx-2'>{separatorCharacter}</span>
-      : <ArrowIcon className='step-arrow-icon mx-2' />
-  ), [separatorCharacter]);
+  const Separator = separatorCharacter
+    ? <span className='step-text mx-2'>{separatorCharacter}</span>
+    : <ArrowIcon className='step-arrow-icon mx-2' />
 
   return (
     <div id={id} className={`vz-steps-wrapper ${className}`}>
@@ -51,7 +47,7 @@ export const VzSteps = ({ id, steps, separatorCharacter, className, selectedStep
               className={`step-text ${stepLabel !== selectedStep ? '' : 'step-text__selected'}`}
               onClick={() => onClickStep(step)}
             >
-              { shownStep }
+              {shownStep}
             </span>
 
             {idx !== (steps.length - 1) && Separator}
