@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import ArrowIcon from '../../assets/icons/ArrowIcon';
 
-import './styles.scss';
+import '../../styles/components/steps.scss';
 
 export interface StepsProps {
   /**

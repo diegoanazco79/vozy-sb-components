@@ -2,7 +2,7 @@ import { useMemo } from 'react';
 
 import ArrowIcon from '../../assets/icons/ArrowIcon';
 
-import './styles.scss';
+import '../../styles/components/pagination.scss';
 
 export interface PaginationProps {
   /**
