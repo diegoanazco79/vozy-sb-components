@@ -3,7 +3,6 @@ import { VzLabel } from '../Label'
 
 import { truncateText } from '../../utils/functions'
 
-import '@coreui/coreui/dist/css/coreui.min.css';
 import '../../styles/checkbox.scss';
 
 export interface CheckboxProps {
