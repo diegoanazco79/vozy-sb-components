@@ -31,6 +31,9 @@ export interface StepsProps {
   onClickStep: (step: any) => void;
 };
 
+/**
+ * It returns a steps element with the some properties passed in.
+ */
 export const VzSteps = ({ id, steps, separatorCharacter, className, selectedStep, onClickStep }: StepsProps) => {
   const Separator = useMemo(() => (
     separatorCharacter

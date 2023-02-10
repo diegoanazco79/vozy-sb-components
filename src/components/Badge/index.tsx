@@ -31,6 +31,9 @@ export interface BadgeProps {
   labelClassName?: string;
 };
 
+/**
+ * It returns a badge element with the some properties passed in.
+ */
 export const VzBadge = ({
   id, type = 'neutral', className = '',
   text, labelType = 'default', labelClassName

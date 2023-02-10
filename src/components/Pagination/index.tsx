@@ -35,6 +35,9 @@ export interface PaginationProps {
   onPageChange: (page: number) => void;
 };
 
+/**
+ * It returns a pagination element with the some properties passed in.
+ */
 export const VzPagination = ({
   id, classNames, currentPage, totalPages, loadingData, connectorText,
   onPageChange
