@@ -1,0 +1,51 @@
+@import './variables.scss';
+
+.vz-interactive-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 2.125rem;
+  border: 0.0625rem solid $light-purple;
+  border-radius: 0.3125rem;
+  padding: 0.15rem 0.5rem 0.15rem 0.9375rem;
+  margin-bottom: 1rem;
+
+  .left-icon {
+    path, circle, rect {
+      stroke: $main-purple;
+    }
+  }
+
+  .vz-interactive-label {
+    font-family: 'Work Sans';
+    font-size: 0.875rem;
+    color: $dark-gray;
+    font-weight: 500;
+    margin-left: 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+}
+
+.c-dark-theme {
+  .vz-interactive-box {
+    border-color: $dark-green;
+
+    .left-icon {
+      path, circle, rect {
+        stroke: $main-green;
+      }
+    }
+  
+    .vz-btn-secondary {
+      background-color: $pure-black;
+    }
+
+    .vz-interactive-label {
+      color: $light-gray-color;
+    }
+  
+  }
+}

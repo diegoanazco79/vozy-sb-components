@@ -10,7 +10,7 @@
     "type": "git"
   },
   "peerDependencies": {
-    "react": ">=16"
+    "react": ">=17"
   },
   "release": {
     "branches": [
@@ -24,18 +24,8 @@
   "dependencies": {
     "@coreui/coreui": "4.2.6",
     "@coreui/react": "4.5.2",
-    "@testing-library/jest-dom": "5.16.5",
-    "@testing-library/react": "13.4.0",
-    "@testing-library/user-event": "13.5.0",
-    "@types/jest": "27.5.2",
-    "@types/node": "16.18.11",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "sass": "^1.58.0",
-    "storybook-dark-mode": "2.0.5",
-    "typescript": "4.9.5"
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
@@ -71,13 +61,20 @@
     "@storybook/manager-webpack4": "6.5.16",
     "@storybook/react": "6.5.16",
     "@storybook/testing-library": "0.0.13",
+    "@types/node": "18.13.0",
+    "@types/react": "18.0.27",
+    "@types/react-dom": "18.0.10",
     "babel-loader": "8.3.0",
-    "copyfiles": "^2.4.1",
+    "copyfiles": "2.4.1",
     "css-loader": "5.2.6",
-    "rimraf": "^4.1.2",
+    "rimraf": "4.1.2",
+    "sass": "1.58.0",
     "sass-loader": "10.1.1",
-    "semantic-release": "^20.1.0",
-    "style-loader": "2.0.0"
+    "semantic-release": "20.1.0",
+    "storybook-dark-mode": "2.0.5",
+    "style-loader": "2.0.0",
+    "typescript": "4.9.5",
+    "webpack": "4.44.2"
   },
   "plugins": [
     "@semantic-release/commit-analyzer",

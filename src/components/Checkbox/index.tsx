@@ -40,6 +40,9 @@ export interface CheckboxProps {
   onChange: () => void
 }
 
+/**
+ * It returns a checkbox element with the some properties passed in.
+ */
 export const VzCheckbox = ({
   id, className = '', label, disabled, checked,
   allowTruncate = false, truncateLength = 0, onChange

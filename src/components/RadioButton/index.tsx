@@ -36,7 +36,7 @@ export interface RadioButtonProps {
 }
 
 /**
- * This component rendering a input radiobutton with a right label.
+ * This component rendering a input radio button with a right label.
 */
 export const VzRadioButton = ({
   id, label, checked, className = '', labelClassName = '', disabled, onChange

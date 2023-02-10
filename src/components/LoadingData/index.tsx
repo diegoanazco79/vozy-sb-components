@@ -29,6 +29,9 @@ export interface LoadingDataProps {
   wrapperStyle?: React.CSSProperties;
 };
 
+/**
+ * It returns a spinner element with the some properties passed in.
+ */
 export const VzLoadingData = ({ id, classNames, size, style, wrapperClassNames, wrapperStyle }: LoadingDataProps) => (
   <div
     className={`vz-loading-data ${wrapperClassNames}`}
