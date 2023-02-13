@@ -14,3 +14,4 @@ export { VzTable } from './components/Table';
 export { VzInput } from './components/Input';
 export { VzErrorMessage } from './components/ErrorMessage';
 export { VzCollapse } from './components/Collapse';
+export { VzDivider } from './components/Divider';
