@@ -1,0 +1,197 @@
+@import './variables.scss';
+@import './utils.scss';
+
+.vz-table-scrollbar {
+	&::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+	  background-color: $background-purple !important;
+	}
+
+	&::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+    background-color: $light-purple !important; 
+		border-radius: 0.625rem !important;
+	}
+
+  &::-webkit-scrollbar, ::-webkit-scrollbar {
+    height: 0.4375rem !important;
+		width: 0.4375rem !important;
+	}
+}
+
+table {
+  border-collapse: unset;
+  border-spacing: 0 !important;
+}
+
+table tr { box-shadow: 0rem 0rem 0rem 0.0625rem $border-gray !important; }
+
+table th, table td { border: hidden !important; }
+
+.table-selected,
+.table-selected > th,
+.table-selected > td {
+  background-color: $background-purple !important;
+}
+
+.table-ui {
+  background-color: $pure-white !important;
+  border-radius: 0.3125rem;
+  box-shadow: none !important;
+  box-sizing: border-box;
+  color: $gray-color !important;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.0625rem;
+  margin-bottom: 0;
+
+  th {
+    border-bottom: 0 !important;
+    border-top: 0;
+    border: none !important;
+    color: $dark-gray;
+    font-family: "Work Sans", sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    height: 2.875rem;
+    line-height: 1.1875rem;
+    padding-bottom: 0.5625rem;
+    padding-right: 0;
+    padding-top: 0.4375rem;
+    position: static;
+    text-align: start;
+
+    div {
+      align-items: center;
+      display: flex;
+      margin-left: 0.9375rem;
+      padding-right: 0;
+    }
+
+    .svg {
+      display: inline-block !important;
+    }
+  }
+
+  tbody tr {
+    background-color: $pure-white !important;
+    height: 3.5rem;
+
+    td:first-child {
+      color: $dark-purple;
+
+      .icon {
+        color: $light-purple;
+        fill: $light-purple;
+        stroke: $light-purple;
+      }
+    }
+  }
+
+  tbody td {
+    color: $dark-gray;
+    padding-left: 1.25rem;
+    padding-top: 0rem;
+    text-align: start;
+    vertical-align: middle;
+  }
+}
+
+.table-hover {
+  tbody tr {
+    &:hover {
+      background-color: $background-purple !important;
+      transition: 0.33s;
+    }
+  }
+}
+
+.table-responsive {
+  background-color: $pure-white !important;
+  border-radius: 0.3125rem;
+  border: 0.0625rem solid $border-gray !important;
+  box-shadow: none !important;
+  overflow-y: hidden;
+  transition: 200ms;
+
+  &:hover { overflow: auto; }
+
+  @extend .vz-table-scrollbar;
+}
+
+.table-header-sticky {
+  table {
+    thead {
+      tr {
+        background-color: $pure-white;
+        position: sticky;
+        top: 0;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-table-scrollbar {
+    &::-webkit-scrollbar-track, ::-webkit-scrollbar-track {
+      background-color: $background-green !important;
+    }	
+
+    &::-webkit-scrollbar-thumb, ::-webkit-scrollbar-thumb {
+      background-color: $dark-green !important;
+    }
+  }
+
+  table tr { box-shadow: 0rem 0rem 0rem 0.0625rem $dark-gray !important; }
+
+  .table-selected,
+  .table-selected > th,
+  .table-selected > td {
+    background-color: $background-green !important;
+  }
+
+  .table-ui {
+    background: $pure-black !important;
+    color: $light-gray-color !important;
+
+    th { color: $light-color; }
+
+    tbody tr {
+      background: $pure-black !important;
+
+      td:first-child {
+        color: $light-green;
+
+        .icon {
+          color: $light-gray-color;
+          fill: $light-gray-color;
+          stroke: $light-gray-color;
+        }
+      }
+    }
+
+    tbody td { color: $light-gray-color; }
+  }
+
+  .table-responsive {
+    background-color: $pure-black !important;
+    border: 0.0625rem solid $dark-gray !important;
+  }
+
+  .table-hover {
+    tbody tr {
+      &:hover { background-color: $background-green !important; }
+    }
+  }
+
+  .table-header-sticky {
+    table {
+      thead {
+        tr { background-color: $pure-black; }
+      }
+    }
+  }
+}

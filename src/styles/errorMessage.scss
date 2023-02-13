@@ -1,0 +1,13 @@
+@import './variables.scss';
+
+.vz-error-message {
+  color: $dark-purple;
+}
+
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-error-message {
+    color: $light-green;
+  }
+}

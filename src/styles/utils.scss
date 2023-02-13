@@ -13,3 +13,13 @@
 .vz-rotate-45 {
   transform: rotateZ(45deg);
 }
+
+.rotate-anim {
+  transform: rotateZ(180deg);
+  transition: 0.25s ease;
+}
+
+.rotate-anim-0 {
+  transform: rotateZ(0deg);
+  transition: 0.25s ease;
+}
