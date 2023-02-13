@@ -51,7 +51,13 @@ export const VzCheckbox = ({
     id={id}
     name={id}
     className={`vz-checkbox ${className}`}
-    label={<VzLabel type='default' label={ allowTruncate ? truncateText(label, truncateLength) : label } />}
+    label={
+      <VzLabel
+        type='default'
+        className='ms-1'
+        label={ allowTruncate ? truncateText(label, truncateLength) : label }
+      />
+    }
     disabled={disabled}
     checked={checked}
     onChange={onChange}

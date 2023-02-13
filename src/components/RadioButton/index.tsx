@@ -46,8 +46,14 @@ export const VzRadioButton = ({
       id={id}
       name={id}
       className={`vz-radio-button ${className}`}
-      type="radio"
-      label={<VzLabel type='default' label={label} className={labelClassName} />}
+      type='radio'
+      label={
+        <VzLabel
+          type='default'
+          label={label}
+          className={`${labelClassName} ms-1`}
+        />
+      }
       checked={checked}
       onChange={onChange}
       disabled={disabled}

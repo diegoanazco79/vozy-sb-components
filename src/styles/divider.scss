@@ -1,0 +1,23 @@
+@import './variables.scss';
+
+.vz-separator {
+  border-color: $border-gray !important;
+}
+
+.vz-separator-dashed {
+  height: 0.063rem;
+  background-image: linear-gradient(90deg, $border-gray, $border-gray 75%, transparent 75%, transparent 100%);
+  background-size: 2.188rem 0.063rem;
+  border: none;
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .vz-separator {
+    border-color: $dark-gray !important;
+  }
+
+  .vz-separator-dashed {
+    background-image: linear-gradient(90deg, $dark-gray, $dark-gray 75%, transparent 75%, transparent 100%);
+  }
+}

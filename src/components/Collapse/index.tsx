@@ -38,8 +38,7 @@ export interface CollapseProps {
  * Useful for a large amount of content.
  */
 export const VzCollapse = ({ id, className, title, titleClassName, customLabel, children }: CollapseProps) => {
-
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   return (
     <CCard className={`vz-collapse-card ${className || ''}`}>
@@ -47,7 +46,11 @@ export const VzCollapse = ({ id, className, title, titleClassName, customLabel, 
         {customLabel ||
           <CRow>
             <CCol md='11' className=''>
-              <VzLabel className={`${titleClassName} mb-0`} type='header-small' label={title} />
+              <VzLabel
+                className={`${titleClassName} mb-0`}
+                style={{ cursor: 'pointer' }}
+                type='header-small' label={title}
+              />
             </CCol>
 
             <CCol md='1' className='d-flex align-items-center justify-content-end pl-0'>
