@@ -34,7 +34,8 @@ export interface CollapseProps {
 }
 
 /**
- * Collapse component toggles the visibility of content across your project with a few classes and some scripts. Useful for a large amount of content.
+ * Collapse component toggles the visibility of content across your project with a few classes and some scripts. 
+ * Useful for a large amount of content.
  */
 export const VzCollapse = ({ id, className, title, titleClassName, customLabel, children }: CollapseProps) => {
 
