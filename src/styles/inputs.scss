@@ -1,0 +1,135 @@
+@import './variables.scss';
+
+.vz-standard-input {
+  background-color: $pure-white;
+  border: 0.0625rem solid $border-gray;
+  color: $dark-gray;
+  border-radius: 0.3125rem;
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1rem;
+  min-height: 2.125rem;
+  padding: 0.563rem 0.813rem;
+
+  box-shadow: none !important;
+
+  &-warning {
+    border-color: $dark-warning-color !important;
+    color: $dark-warning-color !important;
+
+    &:hover {
+      border-color: $dark-warning-color !important;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-visible {
+      border-color: $dark-warning-color !important;
+      color: $dark-warning-color !important;
+    }
+
+    &::placeholder {
+      color: $dark-warning-color !important;
+    }
+
+    &.form-control:focus {
+      color: $dark-warning-color !important;
+    }
+  }
+
+  &:hover {
+    border-color: $main-purple;
+  }
+
+  &:active,
+  &:focus,
+  &:focus-visible {
+    border-color: $main-purple;
+    color: $dark-purple;
+  }
+
+  &::placeholder {
+    color: $light-gray-color;
+  }
+
+  &:disabled {
+    background-color: $light-color;
+    border-color: $border-gray;
+    color: $light-gray-color;
+  }
+
+  &.form-control:focus {
+    color: $dark-purple;
+  }
+}
+
+.vz-standard-input::-webkit-outer-spin-button,
+.vz-standard-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.vz-standard-input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Dark theme */
+.c-dark-theme {
+  .vz-standard-input {
+    background-color: $pure-black;
+    border-color: $dark-gray;
+    color: $light-gray-color;
+
+    &-warning {
+      border-color: $light-warning-color !important;
+      color: $light-warning-color !important;
+
+      &:hover {
+        border-color: $light-warning-color !important;
+      }
+
+      &:active,
+      &:focus,
+      &:focus-visible {
+        border-color: $light-warning-color !important;
+        color: $light-warning-color !important;
+      }
+
+      &::placeholder {
+        color: $light-warning-color !important;
+      }
+
+      &.form-control:focus {
+        color: $light-warning-color !important;
+      }
+    }
+
+    &:hover {
+      border-color: $main-green;
+    }
+
+    &:active,
+    &:focus,
+    &:focus-visible {
+      background-color: $pure-black;
+      color: $light-green;
+      border-color: $main-green;
+    }
+
+    &:disabled {
+      background-color: $dark-color;
+      border-color: $dark-gray;
+      color: $gray-color;
+    }
+
+    &::placeholder {
+      color: $gray-color;
+    }
+
+    &.form-control:focus {
+      color: $light-green;
+    }
+  }
+}
