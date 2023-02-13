@@ -1,0 +1,43 @@
+@import './variables.scss';
+@import './utils.scss';
+
+.vz-collapse-card {
+  background-color: $pure-white;
+  border: 0.0625rem solid $border-gray !important;
+  padding: 0.5rem 1.188rem;
+
+  .collapse-arrow {
+    width: 0.938rem;
+    height: 0.563rem;
+    stroke: $dark-color;
+  }
+
+  .vz-collapse-body {
+    background-color: $pure-white;
+
+    hr {
+      margin-top: 0.5rem;
+      border-color: $border-gray;
+    }
+  }
+}
+
+/* Dark Theme */
+.c-dark-theme {
+  .vz-collapse-card {
+    border-color: $dark-gray !important;
+    background-color: $pure-black;
+
+    .collapse-arrow {
+      stroke: $light-color;
+    }
+
+    .vz-collapse-body {
+      background-color: $pure-black;
+
+      hr {
+        border-color: $dark-gray;
+      }
+    }
+  }
+}
