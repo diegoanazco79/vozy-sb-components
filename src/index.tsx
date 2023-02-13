@@ -12,3 +12,4 @@ export { VzButton } from './components/Button';
 export { VzInteractiveBox } from './components/InteractiveBox';
 export { VzTable } from './components/Table';
 export { VzInput } from './components/Input';
+export { VzErrorMessage } from './components/ErrorMessage'
