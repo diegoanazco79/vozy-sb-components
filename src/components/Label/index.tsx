@@ -6,23 +6,23 @@ export interface LabelProps {
   /**
    * ID of the component
    */
-  id?: string
+  id?: string;
   /**
    * Common css Stylesheets 
    */
-  style?: React.CSSProperties | undefined
+  style?: React.CSSProperties | undefined;
   /**
    * Common bootstrap styles
    */
-  className?: string
+  className?: string;
   /**
    * This is the type of label. Depending on it, it will change its styles
    */
-  type: 'header' | 'header-small' | 'title' | 'default' | 'caption'
+  type: 'header' | 'header-small' | 'title' | 'default' | 'caption';
   /**
    * Label that renders the component
    */
-  label: string
+  label: string;
 }
 
 /**
