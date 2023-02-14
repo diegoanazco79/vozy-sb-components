@@ -1,0 +1,36 @@
+@import './variables.scss';
+@import './fonts.scss';
+
+.info-icon {
+  fill: $gray-color;
+}
+
+.vz-tooltip {
+  .tooltip-arrow {
+    display: none;
+  }
+
+  .tooltip-inner {
+    @extend .vz-caption;
+    color: $dark-purple;
+    background-color: $pure-white;
+    border-radius: 0.3125rem;
+    box-shadow: $shadow-light-mode;
+    padding: 1.25rem;
+  }
+}
+
+/* Dark Mode */
+.c-dark-theme {
+  .info-icon {
+    fill: $light-gray-color;
+  }
+
+  .vz-tooltip {
+    .tooltip-inner {
+      background-color: $pure-black;
+      color: $light-green;
+      box-shadow: $shadow-dark-mode;
+    }
+  }
+}
