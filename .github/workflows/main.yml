@@ -33,7 +33,7 @@ jobs:
         run: npm install
 
       - name: Build App
-        run: npm run build-vite
+        run: npm run build
 
       - name: Semantic Release
         env:

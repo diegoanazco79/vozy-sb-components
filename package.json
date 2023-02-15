@@ -3,35 +3,33 @@
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
-  "type": "module",
-  "main": "./dist/vozy-components.umd.cjs",
-  "module": "./dist/vozy-components.js",
-  "typings": "dist/vozy-components.d.ts",
+  "typings": "dist/index.d.ts",
+  "main": "dist/index.js",
   "repository": {
     "url": "https://github.com/diegoanazco79/vozy-sb-components",
     "type": "git"
   },
+  "peerDependencies": {
+    "react": ">=17"
+  },
   "release": {
-    "branches": ["main"]
+    "branches": [
+      "main"
+    ]
   },
-  "files": ["dist", "dist/style.css"],
-  "exports": {
-    ".": {
-      "import": "./dist/vozy-components.js",
-      "require": "./dist/vozy-components.umd.cjs"
-    }
-  },
+  "files": [
+    "dist",
+    "src"
+  ],
   "dependencies": {
     "@coreui/coreui": "4.2.6",
-    "@coreui/react": "4.5.2",
-    "react": ">=17",
-    "react-dom": "17.0.2",
-    "vite": "4.1.1"
+    "@coreui/react": "4.6.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
   },
   "scripts": {
     "start": "start-storybook -p 6006",
     "build": "npm run clean && tsc && npm run copy-files",
-    "build-vite": "tsc && vite build",
     "clean": "rimraf dist/",
     "copy-files": "copyfiles -u 1 src/**/*.scss dist/"
   },
@@ -53,9 +51,6 @@
       "last 1 safari version"
     ]
   },
-  "peerDependencies": {
-    "react": ">=17"
-  },
   "devDependencies": {
     "@babel/core": "7.20.12",
     "@storybook/addon-actions": "6.5.16",
@@ -67,20 +62,18 @@
     "@storybook/react": "6.5.16",
     "@storybook/testing-library": "0.0.13",
     "@types/node": "18.13.0",
-    "@types/react": "18.0.27",
-    "@types/react-dom": "18.0.10",
+    "@types/react": "18.0.28",
+    "@types/react-dom": "18.0.11",
     "babel-loader": "8.3.0",
     "copyfiles": "2.4.1",
     "css-loader": "5.2.6",
-    "path": "0.12.7",
     "rimraf": "4.1.2",
-    "sass": "1.58.0",
+    "sass": "1.58.1",
     "sass-loader": "10.1.1",
     "semantic-release": "20.1.0",
-    "storybook-dark-mode": "2.0.5",
+    "storybook-dark-mode": "2.0.6",
     "style-loader": "2.0.0",
     "typescript": "4.9.5",
-    "vite-plugin-dts": "1.7.3",
     "webpack": "4.44.2"
   },
   "plugins": [
