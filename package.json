@@ -14,7 +14,7 @@
   "release": {
     "branches": ["main"]
   },
-  "files": ["dist"],
+  "files": ["dist", "dist/style.css"],
   "exports": {
     ".": {
       "import": "./dist/vozy-components.js",

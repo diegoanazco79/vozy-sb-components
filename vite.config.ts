@@ -4,9 +4,10 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   build: {
+    cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, 'src/index.tsx'),
-      name: 'vozyComponents',
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'vozy-components',
       fileName: 'vozy-components'
     }
   },
