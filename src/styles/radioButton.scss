@@ -3,6 +3,7 @@
 .vz-radio-button {
   .form-check-input {
     background-color: $pure-white !important;
+    border-color: $light-gray-color !important;
     box-shadow: none !important;
     cursor: pointer !important;
     height: 1.25rem !important;
@@ -10,7 +11,6 @@
 
     &:checked {
       background-color: transparent !important;
-      border-color: $light-gray-color !important;
       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.45' fill='rgb(122, 60, 222)'/%3e%3c/svg%3e") !important;
     }
   }
@@ -23,7 +23,6 @@
       background-color: $pure-black !important;
       
       &:checked {
-        border-color: $light-gray-color !important;
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.45' fill='rgb(182, 219, 27)'/%3e%3c/svg%3e") !important;
       }
     }
