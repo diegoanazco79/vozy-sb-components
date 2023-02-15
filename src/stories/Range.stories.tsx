@@ -15,7 +15,7 @@ VozyRange.args = {
   leftIcon: '1',
   rightIcon: '100',
   classNameWrapper: 'w-50',
-  value: 2,
+  value: 6,
   minValue: 1,
   maxValue: 100,
   showLabel: true,

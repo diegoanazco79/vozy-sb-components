@@ -1,6 +1,5 @@
-import { CFormRange } from '@coreui/react';
-
-import { VzLabel } from '../Label';
+import { useMemo } from 'react';
+import RangeSlider from 'react-bootstrap-range-slider';
 
 import '../../styles/range.scss';
 
@@ -16,23 +15,19 @@ export interface RangeProps {
   /**
    * Specifies the interval between legal numbers in the component.
    */
-  step: number;
+  step?: number;
   /**
    * Specifies the minimum value for the component.
    */
-  minValue: number;
+  minValue?: number;
   /**
    * Specifies the maximum value for the component.
    */
-  maxValue: number;
+  maxValue?: number;
   /**
    * General css class or bootstrap classes for wrapper component.
    */
   classNameWrapper?: string;
-  /**
-   * General css class or bootstrap classes for input wrapper component.
-   */
-  classNameInputWrapper?: string;
   /**
    * General css class or bootstrap classes for range input.
    */
@@ -40,23 +35,23 @@ export interface RangeProps {
   /**
    * Component JSX or string for left icon.
    */
-  leftIcon: JSX.Element | string;
+  leftIcon?: JSX.Element | string;
   /**
    * Component JSX or string for right icon.
    */
-  rightIcon: JSX.Element | string;
+  rightIcon?: JSX.Element | string;
   /**
    * Handles the disabled state of the range input
    */
-  disabled: boolean;
+  disabled?: boolean;
   /**
-   *
+   * Show or not label with value for current input range
    */
-  showLabel: boolean;
+  showLabel?: boolean;
   /**
-   *
+   * Label that renders in the component
    */
-  labelSymbol: string;
+  labelSymbol?: string;
   /**
    * Handles the onChange function of the range input
    */
@@ -69,11 +64,10 @@ export interface RangeProps {
 export const VzRange = ({
   id,
   value,
-  step,
-  minValue,
-  maxValue,
+  step = 1,
+  minValue = 1,
+  maxValue = 10,
   classNameWrapper = '',
-  classNameInputWrapper = '',
   classNameRange = '',
   leftIcon,
   rightIcon,
@@ -81,37 +75,45 @@ export const VzRange = ({
   showLabel,
   labelSymbol,
   onChange
-}: RangeProps) => (
-  <div className={classNameWrapper}>
-    <div id={id} className={`vz-range-input ${classNameInputWrapper}`}>
-      {leftIcon && (
+}: RangeProps) => {
+  const inputProps = useMemo(() => ({
+    className: `v-range-input mt-0 ${classNameRange || ''}`
+  }), [classNameRange])
+
+  const tooltipStyle = useMemo(() => ({ top: '1.1rem' }), []);
+
+  return (
+    <div
+      id={id}
+      className={`
+        v-range-wrapper ${classNameWrapper || ''} 
+        ${disabled ? 'v-range-wrapper-disabled' : ''}
+      `}
+    >
+      {leftIcon && 
         typeof leftIcon === 'string'
           ? <span className='v-icon-input'>{leftIcon}</span>
-          : leftIcon
-      )}
-
-      <CFormRange
-        className={`px-2 ${classNameRange || ''}`}
-        disabled={disabled}
-        step={step}
+          :  leftIcon
+      }
+  
+      <RangeSlider
         value={value}
+        onChange={onChange}
         min={minValue}
         max={maxValue}
-        onChange={(ev) => onChange(ev)}
+        step={step}
+        tooltip={showLabel ? 'on' : 'off'}
+        tooltipLabel={currentValue => `${currentValue}${labelSymbol}`}
+        inputProps={inputProps}
+        tooltipStyle={tooltipStyle}
+        disabled={disabled}
       />
-
-      {rightIcon && (
+  
+      {rightIcon && 
         typeof rightIcon === 'string'
           ? <span className='v-icon-input'>{rightIcon}</span>
-          : rightIcon
-      )}
+          :  rightIcon
+      }
     </div>
-
-    {showLabel && (
-      <VzLabel
-        label={`${value}${labelSymbol}`}
-        type='default' className='text-center m-0 w-100'
-      />
-    )}
-  </div>
-);
+  );
+};

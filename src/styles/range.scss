@@ -1,30 +1,111 @@
+@import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
 @import './variables.scss';
 
-.vz-range-input {
-  display: flex;
+.v-range-wrapper {
   align-items: center;
+  display: flex;
 
-  .form-range {
+  .v-range-input {
+    background-color: transparent;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+  
+    &:focus, &:active { outline: none !important; }
+  
     &::-webkit-slider-thumb {
-      background-color: $light-purple !important;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.45' fill='%23B98EFF'/%3E%3C/svg%3E") !important;
-      box-shadow: none !important;
-      transition: none !important;
-      margin-top: -0.35rem !important;
-
-      &:active, &:hover {
-        background-color: $main-purple !important;
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.45' fill='rgb(122, 60, 222)'/%3e%3c/svg%3e") !important;
-      }
-
-      &:hover { cursor: grab !important; }
+      appearance: none;
+      -webkit-appearance: none;
+      background-color: $light-purple;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-top: -0.406rem;
+      cursor: grab;
       &:active { cursor: grabbing !important; }
     }
-
-    &::-webkit-slider-runnable-track {
-      background-color: rgba($color: $light-gray-color, $alpha: 0.4) !important;
-      height: 0.25rem !important;
+    
+    &::-moz-range-thumb {
+      appearance: none;
+      -moz-appearance: none;
+      background-color: $light-purple;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-top: -0.406rem;
+      cursor: grab;
+      &:active { cursor: grabbing !important; }
     }
+    
+    &::-ms-thumb {
+      appearance: none;
+      background-color: $light-purple;
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      margin-top: -0.406rem;
+      cursor: grab;
+      &:active { cursor: grabbing !important; }
+    }
+    
+    &::-webkit-slider-runnable-track {
+      appearance: none;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      background-color: rgba($color: $light-gray-color, $alpha: 0.4);
+      border-radius: 0.67050625rem;
+      height: 0.25rem;
+    }
+    
+    &:focus::-webkit-slider-runnable-track {
+      outline: none;
+    }
+    
+    &::-moz-range-track {
+      background-color: rgba($color: $light-gray-color, $alpha: 0.4);
+      border-radius: 0.67050625rem;
+      height: 0.25rem;
+    }
+    
+    &::-ms-track {
+      background-color: rgba($color: $light-gray-color, $alpha: 0.4);
+      border-radius: 0.67050625rem;
+      height: 0.25rem;
+    }
+
+    &:hover {
+      &::-webkit-slider-thumb { background-color: $main-purple; }
+      &::-moz-range-thumb  { background-color: $main-purple; }
+      &::-ms-thumb { background-color: $main-purple; }
+    }
+  }
+
+  .range-slider__wrap {
+    width: 100%;
+    margin-top: 0.325rem;
+    margin-left: 0.25rem;
+    margin-right: 0.25rem;
+  }
+
+  .range-slider__tooltip {
+    z-index: 1 !important;
+
+    .range-slider__tooltip__label {
+      color:$light-purple;
+      background-color: transparent;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.8125rem;
+      font-weight: 400;
+    }
+
+    .range-slider__tooltip__caret {
+      display: none;
+    }
+  }
+
+  .v-range-input:hover ~ .range-slider__tooltip {
+    .range-slider__tooltip__label { color: $main-purple; }
   }
 
   .v-icon-input {
@@ -32,23 +113,40 @@
     font-family: 'Montserrat', sans-serif;
     font-size: 0.65625rem;
   }
+
+  &-disabled {
+    .v-range-input {
+      &::-webkit-slider-thumb { cursor: default !important; }
+      &::-moz-range-thumb { cursor: default !important; }
+      &::-ms-thumb { cursor: default !important; }
+    }
+  }
 }
 
 /* Dark Mode */
 .c-dark-theme {
-  .vz-range-input {
-    .form-range {
-      &::-webkit-slider-thumb {
-        background-color: $light-green !important;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3.45' fill='%23F3FFBA'/%3E%3C/svg%3E") !important;
-  
-        &:active, &:hover {
-          background-color: $main-green !important;
-          background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.45' fill='rgb(182, 219, 27)'/%3e%3c/svg%3e") !important;
-        }
-      }
+  .v-range-wrapper {
+    .v-range-input {
+      &::-webkit-slider-thumb { background-color: $light-green; }
+      &::-moz-range-thumb  { background-color: $light-green; }
+      &::-ms-thumb { background-color: $light-green; }
+      &::-webkit-slider-runnable-track { background-color:  $light-gray-color; }
+      &::-moz-range-track { background-color:  $light-gray-color; }
+      &::-ms-track { background-color:  $light-gray-color; }
 
-      &::-webkit-slider-runnable-track { background-color:  $light-gray-color !important; }
+      &:hover {
+        &::-webkit-slider-thumb { background-color: $main-green; }
+        &::-moz-range-thumb  { background-color: $main-green; }
+        &::-ms-thumb { background-color: $main-green; }
+      }
+    }
+
+    .range-slider__tooltip {
+      .range-slider__tooltip__label { color: $light-green; }
+    }
+
+    .v-range-input:hover ~ .range-slider__tooltip {
+      .range-slider__tooltip__label { color: $main-green; }
     }
 
     .v-icon-input { color: $light-gray-color; }
