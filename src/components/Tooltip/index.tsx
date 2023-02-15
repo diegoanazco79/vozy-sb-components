@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { CTooltip } from '@coreui/react'
 
 import InfoIcon from '../../assets/icons/InfoIcon';
+
 import '../../styles/tooltip.scss';
 
 export interface TooltipProps {
@@ -24,14 +25,24 @@ export interface TooltipProps {
   /**
    * Content node for your trigger
   */
-  trigger?: string | JSX.Element;
+  trigger: string | JSX.Element;
+  /**
+   * Indicate if tooltip is interactive or not
+   */
+  interactive: boolean;
+  /**
+   * Describes the placement of your component 
+   */
+  placement: 'auto' | 'top' | 'right' | 'bottom' | 'left';
 }
 
 /**
  * It returns a tooltip with a trigger and content.
  */
-export const VzTooltip = ({ id, className, iconClassName, content, trigger }: TooltipProps) => {
-
+export const VzTooltip = ({
+  id, className, iconClassName, content, trigger,
+  interactive, placement
+}: TooltipProps) => {
   const [visible, setVisible] = useState(false)
 
   return (
@@ -39,15 +50,20 @@ export const VzTooltip = ({ id, className, iconClassName, content, trigger }: To
       id={id}
       className={`vz-tooltip ${className}`}
       content={content}
-      placement='auto'
-      visible={visible}
-      onMouseEnter={() => setVisible(true)}
-      onMouseLeave={() => setVisible(false)}
+      placement={placement}
+      {...(
+        interactive
+          ? {
+            visible,
+            onMouseEnter: () => setVisible(true),
+            onMouseLeave: () => setVisible(false)
+          }
+          : {}
+      )}
     >
-      {trigger ||
-        <div style={{ width: 'fit-content' }} >
-          <InfoIcon className={`info-icon ${iconClassName}`} />
-        </div>}
+      <div style={{ width: 'fit-content' }} >
+        {trigger || <InfoIcon className={`info-icon ${iconClassName}`} />}
+      </div>
     </CTooltip>
   )
 };
@@ -55,4 +71,6 @@ export const VzTooltip = ({ id, className, iconClassName, content, trigger }: To
 VzTooltip.defaultProps = {
   className: '',
   iconClassName: '',
-}
+  interactive: false,
+  placement: 'auto'
+};

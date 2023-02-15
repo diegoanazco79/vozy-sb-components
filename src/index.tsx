@@ -17,3 +17,4 @@ export { VzCollapse } from './components/Collapse';
 export { VzDivider } from './components/Divider';
 export { VzUploadButton } from './components/UploadFile';
 export { VzTooltip } from './components/Tooltip';
+export { VzRange } from './components/Range';

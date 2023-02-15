@@ -7,7 +7,7 @@ import '../../styles/divider.scss';
 
 export interface DividerProps {
   /**
-   * Label that renders in current component
+   * Label that renders in the center of the current component
    */
   label?: string;
   /**

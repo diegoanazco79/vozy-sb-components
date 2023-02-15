@@ -87,6 +87,9 @@ export interface UploadFileProps {
   onDelete: (id: string | undefined) => void;
 }
 
+/**
+ * It returns a upload input component.
+ */
 export const VzUploadButton = ({
   id,
   className = '',
@@ -122,7 +125,7 @@ export const VzUploadButton = ({
               style={{ display: 'none' }}
               type='file'
               accept={acceptFile}
-              onChange={(ev) => onChange(ev, id)}
+              onChange={ev => onChange(ev, id)}
               disabled={disabled}
             />
 
