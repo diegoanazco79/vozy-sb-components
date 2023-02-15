@@ -23,7 +23,7 @@
       border-radius: 50%;
       margin-top: -0.406rem;
       cursor: grab;
-      &:active { cursor: grabbing !important; }
+      &:active { cursor: grabbing; }
     }
     
     &::-moz-range-thumb {
@@ -35,7 +35,7 @@
       border-radius: 50%;
       margin-top: -0.406rem;
       cursor: grab;
-      &:active { cursor: grabbing !important; }
+      &:active { cursor: grabbing; }
     }
     
     &::-ms-thumb {
@@ -46,7 +46,7 @@
       border-radius: 50%;
       margin-top: -0.406rem;
       cursor: grab;
-      &:active { cursor: grabbing !important; }
+      &:active { cursor: grabbing; }
     }
     
     &::-webkit-slider-runnable-track {
@@ -115,11 +115,7 @@
   }
 
   &-disabled {
-    .v-range-input {
-      &::-webkit-slider-thumb { cursor: default !important; }
-      &::-moz-range-thumb { cursor: default !important; }
-      &::-ms-thumb { cursor: default !important; }
-    }
+    .v-range-input { pointer-events: none !important; }
   }
 }
 

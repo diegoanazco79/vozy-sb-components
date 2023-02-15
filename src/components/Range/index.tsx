@@ -80,7 +80,7 @@ export const VzRange = ({
     className: `v-range-input mt-0 ${classNameRange || ''}`
   }), [classNameRange])
 
-  const tooltipStyle = useMemo(() => ({ top: '1.1rem' }), []);
+  const tooltipStyle = useMemo(() => ({ top: '1.2rem' }), []);
 
   return (
     <div
