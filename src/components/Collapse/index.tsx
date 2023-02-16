@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { CCard, CCol, CCollapse, CRow } from '@coreui/react';
+import { CCard, CCollapse } from '@coreui/react';
 
 import { VzLabel } from '../Label';
 
@@ -44,19 +44,16 @@ export const VzCollapse = ({ id, className, title, titleClassName, customLabel, 
     <CCard className={`vz-collapse-card ${className || ''}`}>
       <div id={id} style={{ cursor: 'pointer' }} onClick={() => setShow(!show)}>
         {customLabel ||
-          <CRow>
-            <CCol md='11' className=''>
-              <VzLabel
-                className={`${titleClassName} mb-0`}
-                style={{ cursor: 'pointer' }}
-                type='header-small' label={title}
-              />
-            </CCol>
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+            <VzLabel
+              className={`${titleClassName} mb-0`}
+              style={{ cursor: 'pointer' }}
+              type='header-small'
+              label={title}
+            />
 
-            <CCol md='1' className='d-flex align-items-center justify-content-end pl-0'>
-              <ArrowIcon className={`collapse-arrow ${!show ? '' : 'vz-rotate'}`} />
-            </CCol>
-          </CRow>
+            <ArrowIcon className={`collapse-arrow ${!show ? '' : 'vz-rotate'}`} />
+          </div>
         }
       </div>
 
