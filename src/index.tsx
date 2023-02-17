@@ -19,3 +19,4 @@ export { VzUploadButton } from './components/UploadFile';
 export { VzTooltip } from './components/Tooltip';
 export { VzRange } from './components/Range';
 export { VzMultiRange } from './components/MultiRange';
+export { VzDropdown } from './components/Dropdown';

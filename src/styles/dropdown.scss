@@ -1,0 +1,141 @@
+@import './variables.scss';
+
+.vz-dropdown {
+  .dropdown-toggle {
+    border-radius: 0.313rem;
+    padding: 0.5rem;
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+
+    .arrow-icon {
+      stroke: $dark-gray;
+      margin-top: 0.25rem;
+      margin-left: 0.5rem;
+    }
+
+    &::after {
+      display: none;
+    }
+
+    &-primary {
+      border: 0.063rem solid $light-purple;
+      background-color: $background-purple;
+      color: $dark-gray;
+
+      &:hover {
+        border-color: $main-purple;
+      }
+
+      &:active, &:focus {
+        border-color: $main-purple;
+        color: $main-purple;
+
+        .arrow-icon {
+          stroke: $main-purple;
+        }
+      }
+
+      &-disabled {
+        background-color: $background-purple;
+        border-color: $border-gray;
+        color: $light-gray-color;
+        pointer-events: none;
+      }
+    }
+
+    &-secondary {
+      border: 0.063rem solid $border-gray;
+      background-color: $light-color;
+      color: $dark-gray;
+
+      &:hover {
+        background-color: $pure-white;
+        border-color: $light-purple;
+      }
+
+      &:active, &:focus {
+        background-color: $pure-white;
+        border-color: $light-purple;
+        color: $main-purple;
+      }
+      &-disabled {
+        background-color: $light-color;
+        border-color: $border-gray;
+        color: $light-gray-color;
+        pointer-events: none;
+      }
+    }
+  }
+  .dropdown-menu  {
+    border-radius: 0.313rem;
+    padding: 0.5rem;
+    border-color: $border-gray;
+    background-color: $light-color;
+  }
+}
+
+/* Dark theme */
+.c-dark-theme {
+  .vz-dropdown {
+    .dropdown-toggle {    
+      .arrow-icon {
+        stroke: $light-gray-color;
+      }
+
+      &-primary {
+        border-color: $dark-green;
+        background-color: $background-green;
+        color: $light-gray-color;
+  
+        &:hover {
+          border-color: $main-green;
+        }
+  
+        &:active, &:focus {
+          border-color: $main-green;
+          color: $main-green;
+
+          .arrow-icon {
+            stroke: $main-green;
+          }
+        }
+
+        &-disabled {
+          background-color: $background-green;
+          border-color: $dark-gray;
+          color: $dark-gray;
+          pointer-events: none;
+        }
+      }
+  
+      &-secondary {
+        border-color: $dark-gray;
+        background-color: $dark-color;
+        color: $light-gray-color;
+  
+        &:hover {
+          background-color: $pure-black;
+          border-color: $dark-green;
+        }
+  
+        &:active, &:focus {
+          background-color: $pure-black;
+          border-color: $dark-green;
+          color: $main-green;
+        }
+        &-disabled {
+          background-color: $dark-color;
+          border-color: $dark-gray;
+          color: $dark-gray;
+          pointer-events: none;
+        }
+      }
+    }
+
+    .dropdown-menu  {
+      border-color: $dark-gray;
+      background-color: $pure-black;
+    }
+  }
+}
