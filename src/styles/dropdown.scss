@@ -7,6 +7,7 @@
     font-family: 'Work Sans', sans-serif;
     font-size: 0.875rem;
     font-weight: 500;
+    box-shadow: none !important;
 
     .arrow-icon {
       stroke: $dark-gray;
@@ -28,11 +29,11 @@
       }
 
       &:active, &:focus {
-        border-color: $main-purple;
-        color: $main-purple;
+        border-color: $main-purple !important;
+        color: $main-purple !important;
 
         .arrow-icon {
-          stroke: $main-purple;
+          stroke: $main-purple !important;
         }
       }
 
@@ -55,9 +56,9 @@
       }
 
       &:active, &:focus {
-        background-color: $pure-white;
-        border-color: $light-purple;
-        color: $main-purple;
+        background-color: $pure-white !important;
+        border-color: $light-purple !important;
+        color: $main-purple !important;
       }
       &-disabled {
         background-color: $light-color;
@@ -93,11 +94,11 @@
         }
   
         &:active, &:focus {
-          border-color: $main-green;
-          color: $main-green;
+          border-color: $main-green !important;
+          color: $main-green !important;
 
           .arrow-icon {
-            stroke: $main-green;
+            stroke: $main-green !important;
           }
         }
 
@@ -120,9 +121,9 @@
         }
   
         &:active, &:focus {
-          background-color: $pure-black;
-          border-color: $dark-green;
-          color: $main-green;
+          background-color: $pure-black !important;
+          border-color: $dark-green !important;
+          color: $main-green !important;
         }
         &-disabled {
           background-color: $dark-color;
