@@ -47,7 +47,8 @@ export const VzBadge = ({
       <VzLabel
         label={text}
         type={labelType}
-        className={`${labelClassName || ''} m-0`}
+        className={labelClassName || ''}
+        style={{ margin: 0 }}
       />
     </CBadge>
   );

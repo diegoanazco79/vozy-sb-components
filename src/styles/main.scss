@@ -1,20 +1,21 @@
-@import "@coreui/coreui/scss/functions";
-@import "@coreui/coreui/scss/variables";
-@import "@coreui/coreui/scss/maps";
-@import "@coreui/coreui/scss/mixins";
-@import "@coreui/coreui/scss/utilities";
-@import "@coreui/coreui/scss/helpers";
+/* Bootstrap utilities & functions */
+@import '@coreui/coreui/scss/functions';
+@import '@coreui/coreui/scss/variables';
+@import '@coreui/coreui/scss/maps';
+@import '@coreui/coreui/scss/mixins';
+@import '@coreui/coreui/scss/utilities';
+@import '@coreui/coreui/scss/utilities/api';
 
-@import "@coreui/coreui/scss/accordion";
-@import "@coreui/coreui/scss/badge";
-@import "@coreui/coreui/scss/card";
-@import "@coreui/coreui/scss/dropdown";
-@import "@coreui/coreui/scss/forms";
-@import "@coreui/coreui/scss/popover";
-@import "@coreui/coreui/scss/reboot";
-@import "@coreui/coreui/scss/root";
-@import "@coreui/coreui/scss/spinners";
-@import "@coreui/coreui/scss/tables";
-@import "@coreui/coreui/scss/tooltip";
-@import "@coreui/coreui/scss/transitions";
-@import "@coreui/coreui/scss/utilities/api";
+/* Bootstrap component styles */
+@import '@coreui/coreui/scss/accordion';
+@import '@coreui/coreui/scss/badge';
+@import '@coreui/coreui/scss/card';
+@import '@coreui/coreui/scss/dropdown';
+@import '@coreui/coreui/scss/forms';
+@import '@coreui/coreui/scss/popover';
+@import '@coreui/coreui/scss/reboot';
+@import '@coreui/coreui/scss/root';
+@import '@coreui/coreui/scss/spinners';
+@import '@coreui/coreui/scss/tables';
+@import '@coreui/coreui/scss/tooltip';
+@import '@coreui/coreui/scss/transitions';

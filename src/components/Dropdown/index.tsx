@@ -75,7 +75,6 @@ export const VzDropdown = ({
   customToggle, label, leftIcon, rightIcon, caret, interactive,
   open, setOpen, customMenu
 }: DropdownProps) => {
-
   const hasOpen = useMemo(() => typeof open !== undefined, [open])
 
   return (
@@ -83,11 +82,15 @@ export const VzDropdown = ({
       id={id}
       className={`vz-dropdown ${className}`}
       autoClose={interactive ? 'outside' : true}
-      {...(!hasOpen ? {
-        visible: open,
-        onShow: () => setOpen(true),
-        onHide: () => setOpen(false)
-      } : {})}
+      {...(
+        hasOpen
+          ? {
+            visible: open,
+            onShow: () => setOpen(true),
+            onHide: () => setOpen(false)
+          }
+        : {}
+      )}
     >
       <CDropdownToggle
         className={`
@@ -104,6 +107,7 @@ export const VzDropdown = ({
           </div>
         }
       </CDropdownToggle>
+
       <CDropdownMenu className={classNameMenu}>
         {customMenu}
       </CDropdownMenu>

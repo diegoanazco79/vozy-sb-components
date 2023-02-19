@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "license": "MIT",
-  "typings": "dist/index.d.ts",
+  "types": "dist/index.d.ts",
   "main": "dist/index.js",
   "repository": {
     "url": "https://github.com/diegoanazco79/vozy-sb-components",
@@ -24,7 +24,7 @@
   "dependencies": {
     "@coreui/coreui": "4.2.6",
     "@coreui/react": "4.6.0",
-    "multi-range-slider-react": "^2.0.2",
+    "multi-range-slider-react": "2.0.2",
     "react": "17.0.2",
     "react-bootstrap-range-slider": "3.0.8",
     "react-dom": "17.0.2"

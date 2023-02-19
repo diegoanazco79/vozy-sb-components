@@ -1,10 +1,11 @@
 @import './variables.scss';
 
-.vz-btn {
+.vz-button {
   align-items: center;
   border-radius: 0.3125rem;
   box-sizing: border-box;
   cursor: pointer;
+  display: flex;
   justify-content: center;
   min-height: 2.125rem;
   outline: none;
@@ -47,14 +48,14 @@
     }
   }
 
-  .vz-btn-label {
+  .vz-button-label {
     font-family: 'Work Sans', sans-serif;
     font-size: 0.875rem;
     color: $dark-gray;
     font-weight: 500;
   }
 
-  &:active, &:focus, &.vz-btn-selected {
+  &:active, &:focus, &.vz-button-selected {
     .icon-gray {
       stroke: $light-purple;
       fill: $light-purple;
@@ -80,7 +81,7 @@
     border: 0.0625rem solid $light-purple !important;
     box-sizing: border-box;
 
-    .vz-btn-label {
+    .vz-button-label {
       color: $dark-gray;
     }
 
@@ -90,21 +91,21 @@
 
     &:active, &:focus {
       outline: none;
-      .vz-btn-label {
+      .vz-button-label {
         color: $main-purple;
       }
     }
 
-    &.vz-btn-selected {
+    &.vz-button-selected {
       &, &:active, &:focus {
         border-color: $main-purple !important;
-        .vz-btn-label {
+        .vz-button-label {
           color: $main-purple;
         }
       }
     }
 
-    &.vz-btn-disabled {
+    &.vz-button-disabled {
       cursor: default !important;
 
       &, &:hover {
@@ -117,13 +118,13 @@
         fill: $light-gray-color;
       }
 
-      .vz-btn-label {
+      .vz-button-label {
         border-color: $border-gray !important;
         color: $light-gray-color;
       }
 
       &:focus, &:active {
-        .vz-btn-label {
+        .vz-button-label {
           color: $light-gray-color;
         }
       }
@@ -143,7 +144,7 @@
     border: 0.0625rem solid $border-gray !important;
     box-sizing: border-box;
 
-    .vz-btn-label {
+    .vz-button-label {
       color: $dark-gray;
     }
 
@@ -154,21 +155,21 @@
     &:active, &:focus {
       border-color: $light-purple !important;
       outline: none;
-      .vz-btn-label {
+      .vz-button-label {
         color: $light-purple;
       }
     }
-    &.vz-btn-selected {
+    &.vz-button-selected {
       &,
       &:active,
       &:focus {
         border-color: $light-purple !important;
-        .vz-btn-label {
+        .vz-button-label {
           color: $light-purple;
         }
       }
     }
-    &.vz-btn-disabled {
+    &.vz-button-disabled {
       cursor: default !important;
 
       &,
@@ -176,13 +177,13 @@
         border-color: $border-gray !important;
         color: $light-gray-color;
       }
-      .vz-btn-label {
+      .vz-button-label {
         border-color: $border-gray !important;
         color: $light-gray-color;
       }
       &:focus,
       &:active {
-        .vz-btn-label {
+        .vz-button-label {
           color: $light-gray-color;
         }
       }
@@ -203,43 +204,43 @@
   /* Button terciary */
   &-terciary {
     box-sizing: border-box;
-    .vz-btn-label {
+    .vz-button-label {
       color: $main-purple;
       text-decoration: underline;
     }
     &:hover {
-      .vz-btn-label {
+      .vz-button-label {
         color: $dark-purple;
       }
     }
     &:active,
     &:focus {
       outline: none;
-      .vz-btn-label {
+      .vz-button-label {
         color: $dark-purple;
       }
     }
-    &.vz-btn-selected {
+    &.vz-button-selected {
       &,
       &:active,
       &:focus {
-        .vz-btn-label {
+        .vz-button-label {
           color: $dark-purple;
         }
       }
     }
-    &.vz-btn-disabled {
+    &.vz-button-disabled {
       cursor: default !important;
       &,
       &:hover {
         color: $light-purple;
       }
-      .vz-btn-label {
+      .vz-button-label {
         color: $light-purple;
       }
       &:focus,
       &:active {
-        .vz-btn-label {
+        .vz-button-label {
           color: $light-purple;
         }
       }
@@ -260,7 +261,7 @@
 
 /* dark theme */
 .c-dark-theme {
-  .vz-btn {
+  .vz-button {
     .icon {
       stroke: $main-green;
       fill: $main-green;
@@ -293,13 +294,13 @@
       }
     }
 
-    .vz-btn-label {
+    .vz-button-label {
       color: $light-gray-color;
     }
 
     &:active,
     &:focus,
-    &.vz-btn-selected {
+    &.vz-button-selected {
       .icon-gray {
         stroke: $main-green;
         fill: $main-green;
@@ -325,7 +326,7 @@
     &-primary {
       background: $background-green;
       border-color: $dark-green !important;
-      .vz-btn-label {
+      .vz-button-label {
         color: $light-gray-color;
       }
       &:hover {
@@ -334,33 +335,33 @@
       &:active,
       &:focus {
         border-color: $main-green !important;
-        .vz-btn-label {
+        .vz-button-label {
           color: $main-green;
         }
       }
-      &.vz-btn-selected {
+      &.vz-button-selected {
         &,
         &:active,
         &:focus {
           border-color: $main-green !important;
-          .vz-btn-label {
+          .vz-button-label {
             color: $main-green;
           }
         }
       }
-      &.vz-btn-disabled {
+      &.vz-button-disabled {
         &,
         &:hover {
           border-color: $dark-gray !important;
           color: $gray-color;
         }
-        .vz-btn-label {
+        .vz-button-label {
           border-color: $dark-gray !important;
           color: $gray-color;
         }
         &:focus,
         &:active {
-          .vz-btn-label {
+          .vz-button-label {
             color: $gray-color;
           }
         }
@@ -382,7 +383,7 @@
     &-secondary {
       background: $dark-color;
       border-color: $dark-gray !important;
-      .vz-btn-label {
+      .vz-button-label {
         color: $light-gray-color;
       }
       &:hover {
@@ -391,33 +392,33 @@
       &:active,
       &:focus {
         border-color: $dark-green !important;
-        .vz-btn-label {
+        .vz-button-label {
           color: $main-green;
         }
       }
-      &.vz-btn-selected {
+      &.vz-button-selected {
         &,
         &:active,
         &:focus {
           border-color: $dark-green !important;
-          .vz-btn-label {
+          .vz-button-label {
             color: $main-green;
           }
         }
       }
-      &.vz-btn-disabled {
+      &.vz-button-disabled {
         &,
         &:hover {
           border-color: $dark-gray !important;
           color: $gray-color;
         }
-        .vz-btn-label {
+        .vz-button-label {
           border-color: $dark-gray !important;
           color: $gray-color;
         }
         &:focus,
         &:active {
-          .vz-btn-label {
+          .vz-button-label {
             color: $gray-color;
           }
         }
@@ -437,7 +438,7 @@
 
     /* Button terciary */
     &-terciary {
-      .vz-btn-label {
+      .vz-button-label {
         color: $main-green;
         text-decoration: underline;
       }
@@ -446,30 +447,30 @@
       }
       &:active,
       &:focus {
-        .vz-btn-label {
+        .vz-button-label {
           color: $light-green;
         }
       }
-      &.vz-btn-selected {
+      &.vz-button-selected {
         &,
         &:active,
         &:focus {
-          .vz-btn-label {
+          .vz-button-label {
             color: $light-green;
           }
         }
       }
-      &.vz-btn-disabled {
+      &.vz-button-disabled {
         &,
         &:hover {
           color: $dark-green;
         }
-        .vz-btn-label {
+        .vz-button-label {
           color: $dark-green;
         }
         &:focus,
         &:active {
-          .vz-btn-label {
+          .vz-button-label {
             color: $dark-green;
           }
         }

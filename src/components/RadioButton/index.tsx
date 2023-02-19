@@ -51,7 +51,8 @@ export const VzRadioButton = ({
         <VzLabel
           type='default'
           label={label}
-          className={`${labelClassName} ms-1`}
+          style={{ marginLeft: '0.25rem' }}
+          className={labelClassName}
         />
       }
       checked={checked}

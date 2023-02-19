@@ -1,9 +1,11 @@
 import { useState } from 'react';
 import { CCard, CCollapse } from '@coreui/react';
 
+import { VzDivider } from '../Divider';
 import { VzLabel } from '../Label';
 
 import ArrowIcon from '../../assets/icons/ArrowIcon';
+
 import '../../styles/collapse.scss';
 
 export interface CollapseProps {
@@ -41,10 +43,10 @@ export const VzCollapse = ({ id, className, title, titleClassName, customLabel, 
   const [show, setShow] = useState(false);
 
   return (
-    <CCard className={`vz-collapse-card ${className || ''}`}>
+    <CCard className={`vz-collapse-wrapper ${className || ''}`}>
       <div id={id} style={{ cursor: 'pointer' }} onClick={() => setShow(!show)}>
         {customLabel ||
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
+          <div className='vz-collapse-header'>
             <VzLabel
               className={`${titleClassName} mb-0`}
               style={{ cursor: 'pointer' }}
@@ -57,8 +59,8 @@ export const VzCollapse = ({ id, className, title, titleClassName, customLabel, 
         }
       </div>
 
-      <CCollapse visible={show} className='vz-collapse-body'>
-        <hr className='mt-1 mb-3' />
+      <CCollapse visible={show} className='vz-collapse-menu'>
+        <VzDivider className='mt-1 mb-3' />
         {children}
       </CCollapse>
     </CCard>

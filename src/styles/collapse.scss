@@ -1,10 +1,16 @@
 @import './variables.scss';
 @import './utils.scss';
 
-.vz-collapse-card {
+.vz-collapse-wrapper {
   background-color: $pure-white;
   border: 0.0625rem solid $border-gray !important;
   padding: 0.5rem 1.188rem;
+
+  .vz-collapse-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
 
   .collapse-arrow {
     width: 0.938rem;
@@ -12,32 +18,19 @@
     stroke: $dark-color;
   }
 
-  .vz-collapse-body {
-    background-color: $pure-white;
-
-    hr {
-      margin-top: 0.5rem;
-      border-color: $border-gray;
-    }
-  }
+  .vz-collapse-menu { background-color: $pure-white; }
 }
 
 /* Dark Theme */
 .c-dark-theme {
-  .vz-collapse-card {
+  .vz-collapse-wrapper {
     border-color: $dark-gray !important;
     background-color: $pure-black;
 
-    .collapse-arrow {
-      stroke: $light-color;
-    }
+    .collapse-arrow { stroke: $light-color; }
 
-    .vz-collapse-body {
+    .vz-collapse-menu {
       background-color: $pure-black;
-
-      hr {
-        border-color: $dark-gray;
-      }
     }
   }
 }

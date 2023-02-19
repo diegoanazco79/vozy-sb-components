@@ -54,7 +54,7 @@ export const VzCheckbox = ({
     label={
       <VzLabel
         type='default'
-        className='ms-1'
+        style={{ marginLeft: '0.25rem' }}
         label={ allowTruncate ? truncateText(label, truncateLength) : label }
       />
     }

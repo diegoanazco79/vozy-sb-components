@@ -11,6 +11,10 @@ export interface DividerProps {
    */
   label?: string;
   /**
+   * Common bootstrap styles
+   */
+  className?: string,
+  /**
    * Type of divider component
    */
   type: 'solid' | 'dashed';
@@ -19,11 +23,11 @@ export interface DividerProps {
 /**
  * A divider is a thin line that groups content in lists and layouts.
  */
-export const VzDivider = ({ label, type }: DividerProps) => {
+export const VzDivider = ({ label, className, type, }: DividerProps) => {
   return (
     label
       ? (
-        <CRow className='no-gutters'>
+        <CRow className={`no-gutters ${className || ''}`}>
           <CCol sm={5} className='px-0'>
             <hr className={type === 'dashed' ? 'vz-separator-dashed' : 'vz-separator'} />
           </CCol>
@@ -38,7 +42,7 @@ export const VzDivider = ({ label, type }: DividerProps) => {
         </CRow>
       )
 
-      : <hr className={type === 'dashed' ? 'vz-separator-dashed' : 'vz-separator'} />
+      : <hr className={`${type === 'dashed' ? 'vz-separator-dashed' : 'vz-separator'} ${className || ''}`} />
   );
 };
 
