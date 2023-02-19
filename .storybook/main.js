@@ -12,6 +12,9 @@ module.exports = {
     '@storybook/addon-interactions',
     'storybook-dark-mode'
   ],
+  core: {
+    builder: 'webpack5',
+  },
   webpackFinal: async (config, { configType }) => {
     config.module.rules.push({
       test: /\.scss$/,
