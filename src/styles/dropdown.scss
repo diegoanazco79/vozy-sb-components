@@ -140,8 +140,8 @@
     }
 
     .dropdown-menu  {
-      border-color: $dark-gray;
-      background-color: $pure-black;
+      border-color: $dark-gray !important;
+      background-color: $pure-black !important;
       box-shadow: $shadow-dark-mode !important;
     }
   }
